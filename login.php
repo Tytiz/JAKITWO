@@ -24,8 +24,14 @@
                      AND password='" . md5($password) . "'";
             $result = mysqli_query($con, $query) or die(mysql_error());
             $rows = mysqli_num_rows($result);
-            
+            if($rows>0){
                 header("Location: add_admin.php");
+            }else {
+            echo "<div class='form'>
+                  <h3>Incorrect Username/password.</h3><br/>
+                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
+                  </div>";
+            }
             
             }elseif ($_REQUEST['usergroup']=='client') {
             $_SESSION['username'] = $username; 
@@ -35,12 +41,7 @@
             $rows = mysqli_num_rows($result);
             // Redirect to user dashboard page
             header("Location: dashboard.php");
-        }else {
-            echo "<div class='form'>
-                  <h3>Incorrect Username/password.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-                  </div>";
-                }
+        }
        
     } else {
         
