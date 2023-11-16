@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.navlogo{
+    max-width: 100px;
+}
+.navbar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #871dd8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+.btn{
+    margin-right: 8px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn{
+    color: #fff;
+    background-color: #543e7e;
+}
+.btn:hover{
+    color: #543e7e;
+    background-color: #fff;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+header .content h4{
+    margin-bottom: 0rem;
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: 600;
+}
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+header .image{
+    position: relative;
+}
+header .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.roomtype{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.roomtype .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.roomtype .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.roomtype .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 4px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.roomtype .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.roomtype .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.roomtype .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.roomtype .card a:hover{
+    color: #1e40af;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.pricing{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pricing .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.pricing .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.pricing .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pricing .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.pricing .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.pricing .card button{
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.pricing .card button:hover{
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+.roomtype .cardbook {
+    color: #fff;
+    text-align: center; /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content vertically */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --maincolor:#814394; 
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    transition: .3s linear;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.header{
+    padding: 2rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right:0 ;
+    left:0;
+    box-shadow:0 .5rem .5rem rgb(0,0,0,.1) ;
+}
+.header #logo img{
+    width: 80px;
+
+
+}
+.header .navbar a{
+
+    font-size: 1.7rem;
+    margin-left: 1.5rem;
+    color: var(--maincolor);
+    
+}
+.header .navbar a:hover{
+
+   color:rgb(232, 117, 218);
+}
+
+
+.header.icons{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.header .icons div{
+    margin-left: 2rem;
+    cursor: pointer
+}
+.header .icons div:hover{
+    color: rgb(217, 98, 243);
+}
+.header .icons #menu-bars{
+    display: none;
+}
+.header.search-box{
+    position: absolute;
+    top: 110%;
+    right: 100%;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: rgba(227, 108, 236, 0.35) 0px 5px 15px;
+}
+.header.search-box input{
+    padding: 1.5rem; 
+    border-radius: 15px;
+    width: 100%;
+    border: none;
+}
+.header .search-box.active{
+    right: 2rem;
+}
+
+
+.main-background{
+    background: url(images/hotel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-text{
+    text-align: center;
+}
+.main-text h2{
+    color: white;
+    font-size: 30px;
+}
+.main-text h1{
+    color:white;
+    font-size: 40px;
+}
+
+.book-section{
+    padding: 2rem 7%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.inner-book{
+    width: 100%;
+    background: rgb(148, 145, 145);
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    
+
+}
+.inner-book input{
+    padding: 1.1rem 2rem;
+    margin: .5rem 0;
+
+}
+.inner-book select{
+    padding: 1.1rem 2rem;
+    margin: .5rem 0;
+
+}
+.book-btn{
+    padding: 1.1rem 2rem;
+    background: var(--maincolor);
+}
+.book-btn a{
+    color: white;
+    font-size: 1.5rem ;
+}
+.main-hotel {
+    padding:2rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.book-room-btn{
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--maincolor);
+    text-align: center;
+}
+.book-room-btn:hover{
+    color: white;
+    background: var(--maincolor);
+   
+}
+.book-room-btn a{
+    color: black;
+    font-size: 1.7rem;
+}
+.book-room-btn a:hover{
+    color: rgb(243, 241, 241);
+
+}
+
+
+
+
+
+
+@media (max-width:768px) {
+    html{
+        font-size: 50%;
+    }
+    .header.icons #menu-bars{
+        display: inline-block;
+    }
+    .header{
+        padding:  2rem;
+    }
+    
+    .header .navbar{
+        position: absolute; 
+        top: 100%;
+        left: 100%;
+        right:0;
+        background: var(--maincolor);
+    }
+    .header .navbar a{
+
+        display: block;
+        margin: 1rem;;
+        padding: 1rem;
+        background: rgb(198, 150, 205);
+        border-radius: 10px;
+    }
+    .book-btn{
+        width: 100%; 
+        padding: 1 rem 0;
+        margin-top: .5rem;
+    }
+    .book-section{
+        padding: 2rem 0;
+        
+        
+    }
+}
