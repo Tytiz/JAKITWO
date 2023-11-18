@@ -34,8 +34,8 @@ require_once('db.php');?>
     <div class="content">
         <span class="blur"></span>
         <span class="blur"></span>
-        <h4>SELECT DATE AND TIME</h4>
-        <H1>MUCHROOM HOTEL</H1>
+        <h4> </h4>
+   
         <p>
            
         </p>
@@ -47,8 +47,8 @@ require_once('db.php');?>
 
     <div class="main-background">
         <div class="main-text">
-            <h2> </h2>
-            <h1>   </h1>
+        <h1> booking </h1>
+            <h2> Please select date and room type</h2>
         </div>
         
     </div>
@@ -64,8 +64,8 @@ require_once('db.php');?>
 <body>
     <div class="book-section">
         <div class="inner-book">
-            <input type="date" name="checkin" >
-            <input type="date" name="checkout">
+            <input type="date" name="checkin" value="default">
+            <input type="date" name="checkout" placeholder="Check-out">
             <select name="chooseroom" style="">
 						<?php
 						//select USERGROUP_ID, USERGROUP_NAME from USERGROUP
@@ -80,21 +80,8 @@ require_once('db.php');?>
 						?>
 					</select>
             <input type="text" name="person" placeholder="1 Person">
-            <?php
-            $checkin = stripslashes($_REQUEST['checkin']);
-            //escapes special characters in a string
-            $checkin = mysqli_real_escape_string($con, $checkin);
-            $checkout   = stripslashes($_REQUEST['checkout']);
-            $checkout   = mysqli_real_escape_string($con, $checkout);
-            $roomtype    = stripslashes($_REQUEST['chooseroom']);
-            $roomtype    = mysqli_real_escape_string($con, $roomtype);
-            		$query    = "INSERT into `reservation` (Check-in-date,Check-out-date,type_name)
-                     VALUES ('$checkin','$checkout','$roomtype')";
-            		$result   = mysqli_query($con, $query);
-					
-					?>
             <div class="book-btn">
-                <a href="bookcon.php">book now</a>
+                <a href="confirm.php">book now</a>
             </div>
 
         </div>
